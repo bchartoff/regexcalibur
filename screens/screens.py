@@ -1,13 +1,11 @@
 import re
+import sre_constants
 import globals
 import terminaloutput
 from mobs import *
 from inventory import *
 modify_text = terminaloutput.modify_text
 modify_text_file = terminaloutput.modify_text_file
-
-
-
 
 def on_load(load_message):
 	load_message = load_message[0]
@@ -50,8 +48,6 @@ def eval_input(inp):
 		return modify_text_file("screens/help.txt")
 	elif miss(inp) and kind == "mob":
 		globals.lives -= 1
-		#print ["miss"] + globals.active_miss_strings
-		#print ["miss strings: "]+globals.hit_strings
 		return miss(inp)
 	elif kind == "mob":
 		globals.active_screen = invscreens[len(globals.active_inventory)]
@@ -69,7 +65,10 @@ def eval_input(inp):
 		return ["Yargh, I don't know how to %s"%inp]
 
 def miss(inp):
-	inp = re.compile(inp)
+	try:
+		inp = re.compile(inp)
+	except sre_constants.error:
+		return ["\n\tYour regex was formed...poorly (maybe mismatched parentheses?","\t"+modify_text("#R<3R# ")*globals.lives+"\n"]
 	for s in globals.active_miss_strings:
 		if re.match(inp,s):
 			return ["\n\tTragedy! Your regex hit a woodland creature by matching "+s,"","\t"+modify_text("#R<3R# ")*globals.lives+"\n"]
@@ -130,9 +129,4 @@ losescreen = Screen("end","",modify_text_file("screens/losescreen.txt"),dummy,""
 mobscreens = [Screen("mob","regex: ",globals.hit_mobs[i].art+globals.hit_mobs[i].strings+[""]+globals.miss_mobs[i].art+globals.miss_mobs[i].strings+["","Type a single regex to hit the monsters but avoid hitting the woodland creatures"],on_load,"mob%d"%i) for i in range(0,globals.num_mobs)]
 invscreens = [Screen("inv","",[modify_text("\t\t\t----#GYOU FOUND A TREASURE!G#----"),""]+globals.inventory[i].art+[""]+globals.inventory[i].desc,on_load,"inv%d"%i) for i in range(0,len(globals.inventory))]
 
-###########list of files to create
-#mob regexes
-
-
-#ascii text art powered by https://github.com/patorjk/figlet.js
 

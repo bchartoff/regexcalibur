@@ -1,3 +1,21 @@
-\	escape character, used to match special characters (and not interpret them
-	as regex). Special characters are + ? . * ^ $ ( ) [ ] { } | \
-	Example: '\(\w*\?\)' matches (yeah?), (is it?), etc.
+\		escape character, used to match special characters (and not interpret them
+		as regex). Special characters are + ? . * ^ $ ( ) [ ] { } | \
+		Example: '\(\w*\?\)' matches (yeah?), (is it?), etc.
+
+?		modify a regex to be "non greedy" or "lazy".
+		Example: 	.*\\ would match the entire expression
+				path\to\files\
+				.?\\ given the same input would only match
+				path\
+
+
+(?=)	Lookahead, makes sure a given string matches a certain pattern, THEN
+		matches a regex. Can be strung together.
+		Example: To make sure a string contains at least one uppercase letter
+		and at least one number in any order:
+		^(?=.*[A-Z])(?=.*\d).* matches Abc1, 1ABC, a1Bc, etc.
+
+(?!)	Negative lookahead, makes sure a given string DOES NOT match a certain
+		pattern, THEN matches a regex. Can be strung together.
+		Example: Extending the example above to not include a period
+		^(?!.*\.)(?=.*[A-Z])(?=.*\d).* matches a1Bc but NOT a.1Bc
