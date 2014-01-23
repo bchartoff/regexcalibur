@@ -14,6 +14,6 @@ See in game help for more instructions.
 
 ##Credits
 
-Monster and woodland creature ASCII art distrubed under Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0), and can be found [here](http://candybox2.net/ascii_art.html).
+Monster and woodland creature ASCII art originally created for Candybox 2 and distributed under Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0), and can be found [here](http://candybox2.net/ascii_art.html).
 
 ASCII text art created using [figlet.js](https://github.com/patorjk/figlet.js)
