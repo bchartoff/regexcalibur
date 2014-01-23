@@ -6,9 +6,9 @@ A simple command line game for learning about regular expressions. Type regexes,
 
 To run, navigate to the regexcalibur folder and run
 
-''
+``
 python regexcalibur.py
-''
+``
 
 See in game help for more instructions.
 
