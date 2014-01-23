@@ -1,0 +1,15 @@
+\number	used to refer back to parenthetical groups. \1 refers to the
+	first group, \2 to the second, etc.
+	Examples: '(\d*).*\1' matches 7th son of a 7th son, 1 for 1, etc. but NOT
+	7 of 9, 13 going on 30, etc.
+
+	'(.)(.)\2\1' matches abba, 1221, 0000, etc.
+
+(?P)	In Python, used to refer to groups my name instead of number.
+		(?P<name>)	capture and name the group
+		(?P=name)	refer back to the group
+		Example: (?P<user>\w*)@zombo.com.*(?P=user) will match
+		bchartoff@zombo.com...bchartoff.
+		Most useful when referring back to matched groups in Python.
+		Example: myregex.match.group(1) can be replaced with
+		myregex.match.group('user')

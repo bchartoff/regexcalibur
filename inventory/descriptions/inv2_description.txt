@@ -1,0 +1,17 @@
+{} 	repeat the preceding character or expression the specified number of times
+	{n} 	matches exactly n times
+	{m,n}	matches at least m and up to n times
+	{m,}	matches at least m times
+	{,n}	matches up to n times
+	Example: '^3{2,3}$' matches 33,333 but NOT 3,3333
+	Note: without specifying line start/end, '3{2,3}' will partially match 3#G333G#
+
+()	can be used to repeat longer expressions, and in general to group
+	Example: '(ziga){2}' matches zigaziga
+
++	repeat the preceding character or expression 1 or more times, equivilant to {1,}
+	Example: '(<3)+' matches <3, <3<3, <3<3<3<3, etc.
+
+?	repeat the preceding character or expression 0 or 1 times, equivilant to {0,1}
+	can be thought of as an "optional" pattern
+	Example: 'colou?r' matches color or colour but NOT colouuur

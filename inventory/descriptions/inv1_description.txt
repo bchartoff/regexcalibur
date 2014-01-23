@@ -1,0 +1,5 @@
+^ 	match the start of a line
+	Example: '^un' matches the "un" in unfit, unfair, uno but NOT fun, redundant, etc.
+
+$	match the end of a line
+	Example: '.*ing$' matches sing, bling, schwing, but NOT ringer, inga, etc.

@@ -1,0 +1,5 @@
+. 	match any single character other than newline
+	Example: 'ben.' matches bens, bent, ben', ben1 etc.
+
+*	repeat the preceding character/expression 0 or more times
+	Example: 'hi*' matches h, hi, hiiii, hiiiiiiiiii, etc.

@@ -1,0 +1,12 @@
+[]	match any one character inside brackets, [abc] is equivilant to
+	(a|b|c), | represents "or"
+	Example: 'h[aeo]h[aeo]' matches haha, hehe, hoho but NOT hh or hihi
+
+[^]	match NONE of the characters inside brackets exactly once
+	Example: '^[^#%]' matches comment, //comment, c#omment but NOT
+	#comment, ##comment, %comment
+
+[-]	match any one character in a range of letters of digits
+	[0-9] is equivilant to [0123456789] or \d and
+	[a-z] is equivilant to [abcdefghijklmnopqrstuvwxyz]
+	Example: '^1[0-9]'' matches 10,11,12,...19

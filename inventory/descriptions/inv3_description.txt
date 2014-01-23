@@ -1,0 +1,11 @@
+\d 	match any single digit, 0-9
+	Example: '\dth' matches 4th, 5th, 7th, etc.
+
+\s	match any single white space character (space, tab, newline, etc)
+	Example: 'New\s*York' matches New York, New      York, New, etc.
+	                                                       York
+
+\w 	match a single word character, which include a-z A-Z, 0-9 and the
+	underscore, _
+	Example: '^\w*$' matches bchartoff, bchartoff1, b_chartoff, but NOT
+	bchartoff@gmail, b.chartoff, etc.

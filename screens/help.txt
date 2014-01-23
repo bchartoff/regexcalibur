@@ -1,0 +1,28 @@
+
+
+ *******   ********   ********  ******** **     **   ******      **     **       ** ******   **     ** *******  
+/**////** /**/////   **//////**/**///// //**   **   **////**    ****   /**      /**/*////** /**    /**/**////** 
+/**   /** /**       **      // /**       //** **   **    //    **//**  /**      /**/*   /** /**    /**/**   /** 
+/*******  /******* /**         /*******   //***   /**         **  //** /**      /**/******  /**    /**/*******  
+/**///**  /**////  /**    *****/**////     **/**  /**        **********/**      /**/*//// **/**    /**/**///**  
+/**  //** /**      //**  ////**/**        ** //** //**    **/**//////**/**      /**/*    /**/**    /**/**  //** 
+/**   //**/******** //******** /******** **   //** //****** /**     /**/********/**/******* //******* /**   //**
+//     // ////////   ////////  //////// //     //   //////  //      // //////// // ///////   ///////  //     // 
+
+Type regular expressions to match all the words underneath the #RREDR# monsters,
+while not matching any of the words underneath the #GGREENG# forest creatures.
+
+Regexcalibur is best displayed in a maximized shell with white background.
+
+#GCommands:G#
+i - Open inventory to see your mighty weapons and read about the regex's from which
+they were forged.
+
+it - Just read about the mighty regex's (no ascii art).
+
+l - See how many lives you have left. Miss a monster or hit a woodland creature to
+lose a life.
+
+h - See this help screen again.
+
+			----#BPress Any Key to ContinueB#----
