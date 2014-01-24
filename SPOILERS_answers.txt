@@ -1,0 +1,39 @@
+Regex			      Plain language description
+
+.*world.*			Match anything 0 or more times, followed by case-sensitive 
+				"world", followed by anything 0 or more times (which 
+				catches both "world" and "worlds")
+
+^re.*ed$			Match a string that begins with "re", has anything (or 
+				nothing) in the middle, and ends with "ed".
+
+^(h.){2,4}$			Match a string which contains the letter "h" followed by 
+			      any single character, with both characters repeated 2 to 4
+			      times. By marking the beginning and end, we make sure to not
+			      match strings like "hohohohohoho", which contain 2-4
+			      repetitions inside the string of 6 repetitions.
+
+^\w?\d{3}/\d{2}\w\d{2}$	Match a single optional word character, followed by
+			      exactly 3 digits, followed by a '/', followed by
+			      exactly 2 digits, followed by a single word character
+			      followed by exactly 2 digits, followed by the end
+			      of the string (these are tire sizes, btw).
+
+.*(.)\1.*			Match anything any number of times, followed by any
+			      single character, followed by the SAME single character,
+			      followed by anything any number of times.
+
+[^\d]*@[Zz]ombo.com		Match any number of characters that are not digits,
+			      followed by '@', followed by either a lowercase or a
+			      capital Z, followed by 'ombo.com'.
+
+(?=.{5,})(?=.*[A-Z])(?=.*[a-z])(?=.*[!?.]).*
+
+			      OK. Search the string for anything repeated 5 or more times.
+			      If found, go back to the start and search the string for
+			      anything any number of times, followed by any single capital letter,
+			      if found, go back to the start and search the string for anything
+			      any any number of times, followed by any single lowercase letter,
+			      if found, search the string for anything any number of times,
+			      followed by either a '!' OR a '?' OR a '.'. If found, capture the
+			      entire string.
