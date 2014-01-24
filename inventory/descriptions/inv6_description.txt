@@ -5,7 +5,7 @@
 ?		modify a regex to be "non greedy" or "lazy".
 		Example: 	.*\\ would match the entire expression
 				path\to\files\
-				.?\\ given the same input would only match
+				.*?\\ given the same input would only match
 				path\
 
 
